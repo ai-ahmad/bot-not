@@ -30,7 +30,4 @@ async def welcome(message: types.Message):
     await Form.waiting_for_button_click.set()
 
 if __name__ == '__main__':
-    try:
         executor.start_polling(dp, skip_updates=True)
-    except NetworkError as e:
-        print(f"NetworkError occurred: {e}")
